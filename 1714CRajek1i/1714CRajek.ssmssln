@@ -3,15 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # SQL Server Management Studio Solution File, Format Version 18.00
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajek1i", "1714CRajek1i\1714CRajek1i.ssmssqlproj", "{DFB91525-03B0-48C3-B864-95A0A3B9F85D}"
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajek2a", "..\1714CRajek2a\1714CRajek2a.ssmssqlproj", "{1544E6F1-76D2-4BFD-84E3-62092C1CD484}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajek1i", "1714CRajek1i.ssmssqlproj", "{036FABCC-253C-47AD-8908-56472290164E}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajekex2b", "..\1714CRajekex2b\1714CRajekex2b.ssmssqlproj", "{A00A7109-875E-4290-B608-97D9F43921D7}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajekex2c", "1714CRajekex2c\1714CRajekex2c.ssmssqlproj", "{8BA38342-8360-4392-921F-B374C26C3BD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DFB91525-03B0-48C3-B864-95A0A3B9F85D}.Default|Default.ActiveCfg = Default
-		{6495DA48-1845-497B-9F41-79E19A5FE1B7}.Default|Default.ActiveCfg = Default
+		{1544E6F1-76D2-4BFD-84E3-62092C1CD484}.Default|Default.ActiveCfg = Default
+		{036FABCC-253C-47AD-8908-56472290164E}.Default|Default.ActiveCfg = Default
+		{A00A7109-875E-4290-B608-97D9F43921D7}.Default|Default.ActiveCfg = Default
+		{44A55816-6293-4251-A821-E470A77E0ACD}.Default|Default.ActiveCfg = Default
+		{8BA38342-8360-4392-921F-B374C26C3BD3}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

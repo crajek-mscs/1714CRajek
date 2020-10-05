@@ -5,13 +5,18 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajekex2b", "1714CRajekex2b.ssmssqlproj", "{072D3301-7273-4426-9D72-831E815129B7}"
 EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajek1i", "..\1714CRajek1i\1714CRajek1i.ssmssqlproj", "{C385C7E7-0C16-413B-A3ED-29E9F5D6B8E9}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajek2a", "..\1714CRajek2a\1714CRajek2a.ssmssqlproj", "{90F9CE1A-8417-4823-8BBA-115A4E0CCFDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F1A77BCE-2606-4015-850B-CA7F3BA06855}.Default|Default.ActiveCfg = Default
 		{072D3301-7273-4426-9D72-831E815129B7}.Default|Default.ActiveCfg = Default
+		{C385C7E7-0C16-413B-A3ED-29E9F5D6B8E9}.Default|Default.ActiveCfg = Default
+		{90F9CE1A-8417-4823-8BBA-115A4E0CCFDB}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
