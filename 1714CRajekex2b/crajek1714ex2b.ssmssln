@@ -9,6 +9,10 @@ Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajek1i", "..\1714CRaj
 EndProject
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajek2a", "..\1714CRajek2a\1714CRajek2a.ssmssqlproj", "{90F9CE1A-8417-4823-8BBA-115A4E0CCFDB}"
 EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajekex2c", "..\1714CRajekex2c\1714CRajekex2c.ssmssqlproj", "{CA697AB1-EA16-4B59-80E8-EA3E9C103384}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajekex2d", "..\1714CRajekex2d\1714CRajekex2d.ssmssqlproj", "{5C3BB69F-7503-404A-B749-E6AC3753E860}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
@@ -17,6 +21,9 @@ Global
 		{072D3301-7273-4426-9D72-831E815129B7}.Default|Default.ActiveCfg = Default
 		{C385C7E7-0C16-413B-A3ED-29E9F5D6B8E9}.Default|Default.ActiveCfg = Default
 		{90F9CE1A-8417-4823-8BBA-115A4E0CCFDB}.Default|Default.ActiveCfg = Default
+		{CA697AB1-EA16-4B59-80E8-EA3E9C103384}.Default|Default.ActiveCfg = Default
+		{5C3BB69F-7503-404A-B749-E6AC3753E860}.Default|Default.ActiveCfg = Default
+		{EF5FC19C-12B3-4F56-93DB-CA2A4140FCF8}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

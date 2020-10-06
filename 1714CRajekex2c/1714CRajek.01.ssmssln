@@ -5,12 +5,25 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajekex2c", "1714CRajekex2c.ssmssqlproj", "{8A1397DB-5B04-47C2-A8AC-498FCD8FD827}"
 EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajekex2d", "..\1714CRajekex2d\1714CRajekex2d.ssmssqlproj", "{EBB56E83-B258-4558-B5E6-6C0B53820F0D}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajek1i", "..\1714CRajek1i\1714CRajek1i.ssmssqlproj", "{121D952F-FF76-4F38-A2F6-6C74FBA50AF2}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajek2a", "..\1714CRajek2a\1714CRajek2a.ssmssqlproj", "{910DDD7B-F4CF-43C1-8B3A-5AF02B67D7FB}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajekex2b", "..\1714CRajekex2b\1714CRajekex2b.ssmssqlproj", "{1825A08B-C0C2-4422-8C4A-6F2814184DD6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{8A1397DB-5B04-47C2-A8AC-498FCD8FD827}.Default|Default.ActiveCfg = Default
+		{EBB56E83-B258-4558-B5E6-6C0B53820F0D}.Default|Default.ActiveCfg = Default
+		{121D952F-FF76-4F38-A2F6-6C74FBA50AF2}.Default|Default.ActiveCfg = Default
+		{910DDD7B-F4CF-43C1-8B3A-5AF02B67D7FB}.Default|Default.ActiveCfg = Default
+		{1825A08B-C0C2-4422-8C4A-6F2814184DD6}.Default|Default.ActiveCfg = Default
+		{0A6CE5A5-A882-417C-8747-C545F94F95A5}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
