@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 18.00
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajekex2e", "1714CRajekex2e.ssmssqlproj", "{70C1D62F-973E-4EAF-92B2-2A20F42C40FA}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajek1i", "..\1714CRajek1i\1714CRajek1i.ssmssqlproj", "{A460F577-7EC1-4B65-89B2-DEDFEDDC17F8}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajek2a", "..\1714CRajek2a\1714CRajek2a.ssmssqlproj", "{B8D1F9B4-95D4-4594-8B37-89FB7DAF3139}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajekex2b", "..\1714CRajekex2b\1714CRajekex2b.ssmssqlproj", "{47930159-4AA4-4C88-8BAD-2D8AD64835C3}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajekex2c", "..\1714CRajekex2c\1714CRajekex2c.ssmssqlproj", "{61A0E8D9-3149-4151-82C7-CE2993D48F47}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajekex2d", "..\1714CRajekex2d\1714CRajekex2d.ssmssqlproj", "{F803F4F6-42DD-42BC-96BD-E954E058090B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70C1D62F-973E-4EAF-92B2-2A20F42C40FA}.Default|Default.ActiveCfg = Default
+		{5F2C0AD4-BEC8-46E2-918C-00DD8DC84FB7}.Default|Default.ActiveCfg = Default
+		{A460F577-7EC1-4B65-89B2-DEDFEDDC17F8}.Default|Default.ActiveCfg = Default
+		{B8D1F9B4-95D4-4594-8B37-89FB7DAF3139}.Default|Default.ActiveCfg = Default
+		{47930159-4AA4-4C88-8BAD-2D8AD64835C3}.Default|Default.ActiveCfg = Default
+		{61A0E8D9-3149-4151-82C7-CE2993D48F47}.Default|Default.ActiveCfg = Default
+		{F803F4F6-42DD-42BC-96BD-E954E058090B}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93C596B3-3110-4B91-83C6-9455B2A29836}
+	EndGlobalSection
+EndGlobal
