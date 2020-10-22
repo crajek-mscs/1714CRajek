@@ -28,7 +28,56 @@
       </Items>
     </LogicalFolder>
     <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
-      <Items />
+      <Items>
+        <FileNode Name="crajek1714ex2e.1.PNG">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>crajek1714ex2e.1.PNG</FullPath>
+        </FileNode>
+        <FileNode Name="crajek1714ex2e.2.PNG">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>crajek1714ex2e.2.PNG</FullPath>
+        </FileNode>
+        <FileNode Name="crajek1714ex2e.3.PNG">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>crajek1714ex2e.3.PNG</FullPath>
+        </FileNode>
+        <FileNode Name="crajek1714ex2e.4.PNG">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>crajek1714ex2e.4.PNG</FullPath>
+        </FileNode>
+        <FileNode Name="crajek1714ex2e.5.PNG">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>crajek1714ex2e.5.PNG</FullPath>
+        </FileNode>
+        <FileNode Name="crajek1714ex2e.6.PNG">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>crajek1714ex2e.6.PNG</FullPath>
+        </FileNode>
+        <FileNode Name="crajek1714ex2e.7.PNG">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>crajek1714ex2e.7.PNG</FullPath>
+        </FileNode>
+        <FileNode Name="crajek1714ex2e.8.PNG">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>crajek1714ex2e.8.PNG</FullPath>
+        </FileNode>
+      </Items>
     </LogicalFolder>
   </Items>
 </SqlWorkbenchSqlProject>
