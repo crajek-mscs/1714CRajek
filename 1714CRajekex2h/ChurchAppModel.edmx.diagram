@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7e6fa355f45a42faaff47e05fe9fdf61" Name="Diagram1" ZoomLevel="73" >
+        <EntityTypeShape EntityType="ChurchAppModel.Person" Width="1.5" PointX="0.5" PointY="1.125" />
+        <EntityTypeShape EntityType="ChurchAppModel.Location" Width="1.5" PointX="6.5" PointY="0.75" />
+        <EntityTypeShape EntityType="ChurchAppModel.BusinessTransaction" Width="1.5" PointX="6.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChurchAppModel.Church" Width="1.5" PointX="8.5" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChurchAppModel.Doner" Width="1.5" PointX="2.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChurchAppModel.Member" Width="1.5" PointX="2.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChurchAppModel.Pastor" Width="1.5" PointX="4.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChurchAppModel.TransationType" Width="1.5" PointX="8.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChurchAppModel.PotentialMember" Width="1.5" PointX="4.875" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="ChurchAppModel.LocationPerson" />
+        <AssociationConnector Association="ChurchAppModel.PersonPastor" />
+        <AssociationConnector Association="ChurchAppModel.PersonPotentialMember" />
+        <AssociationConnector Association="ChurchAppModel.PersonDoner" />
+        <AssociationConnector Association="ChurchAppModel.PersonBusinessTransaction" />
+        <AssociationConnector Association="ChurchAppModel.PersonMember" />
+        <AssociationConnector Association="ChurchAppModel.BusinessTransactionTransationType" />
+        <AssociationConnector Association="ChurchAppModel.ChurchLocation" />
+        <AssociationConnector Association="ChurchAppModel.ChurchMember" />
+        <AssociationConnector Association="ChurchAppModel.ChurchPastor" />
+        <AssociationConnector Association="ChurchAppModel.ChurchDoner" />
+        <AssociationConnector Association="ChurchAppModel.ChurchPerson" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

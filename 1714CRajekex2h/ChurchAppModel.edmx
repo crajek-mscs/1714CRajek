@@ -1,0 +1,707 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ChurchAppModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ChurchAppModelStoreContainer">
+    <EntitySet Name="People" EntityType="ChurchAppModel.Store.People" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Locations" EntityType="ChurchAppModel.Store.Locations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BusinessTransactions" EntityType="ChurchAppModel.Store.BusinessTransactions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Churches" EntityType="ChurchAppModel.Store.Churches" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Doners" EntityType="ChurchAppModel.Store.Doners" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Members" EntityType="ChurchAppModel.Store.Members" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pastors" EntityType="ChurchAppModel.Store.Pastors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TransationTypes" EntityType="ChurchAppModel.Store.TransationTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PotentialMembers" EntityType="ChurchAppModel.Store.PotentialMembers" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="LocationPerson" Association="ChurchAppModel.Store.LocationPerson">
+      <End Role="Location" EntitySet="Locations" />
+      <End Role="Person" EntitySet="People" />
+    </AssociationSet>
+    <AssociationSet Name="PersonPastor" Association="ChurchAppModel.Store.PersonPastor">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Pastor" EntitySet="Pastors" />
+    </AssociationSet>
+    <AssociationSet Name="PersonPotentialMember" Association="ChurchAppModel.Store.PersonPotentialMember">
+      <End Role="Person" EntitySet="People" />
+      <End Role="PotentialMember" EntitySet="PotentialMembers" />
+    </AssociationSet>
+    <AssociationSet Name="PersonDoner" Association="ChurchAppModel.Store.PersonDoner">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Doner" EntitySet="Doners" />
+    </AssociationSet>
+    <AssociationSet Name="PersonBusinessTransaction" Association="ChurchAppModel.Store.PersonBusinessTransaction">
+      <End Role="Person" EntitySet="People" />
+      <End Role="BusinessTransaction" EntitySet="BusinessTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="PersonMember" Association="ChurchAppModel.Store.PersonMember">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Member" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="BusinessTransactionTransationType" Association="ChurchAppModel.Store.BusinessTransactionTransationType">
+      <End Role="BusinessTransaction" EntitySet="BusinessTransactions" />
+      <End Role="TransationType" EntitySet="TransationTypes" />
+    </AssociationSet>
+    <AssociationSet Name="ChurchLocation" Association="ChurchAppModel.Store.ChurchLocation">
+      <End Role="Church" EntitySet="Churches" />
+      <End Role="Location" EntitySet="Locations" />
+    </AssociationSet>
+    <AssociationSet Name="ChurchMember" Association="ChurchAppModel.Store.ChurchMember">
+      <End Role="Church" EntitySet="Churches" />
+      <End Role="Member" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="ChurchPastor" Association="ChurchAppModel.Store.ChurchPastor">
+      <End Role="Church" EntitySet="Churches" />
+      <End Role="Pastor" EntitySet="Pastors" />
+    </AssociationSet>
+    <AssociationSet Name="ChurchDoner" Association="ChurchAppModel.Store.ChurchDoner">
+      <End Role="Church" EntitySet="Churches" />
+      <End Role="Doner" EntitySet="Doners" />
+    </AssociationSet>
+    <AssociationSet Name="ChurchPerson" Association="ChurchAppModel.Store.ChurchPerson">
+      <End Role="Church" EntitySet="Churches" />
+      <End Role="Person" EntitySet="People" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="People">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DescriptionOfRole" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateOfBirth" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Location_Id" Type="int" Nullable="false" />
+    <Property Name="Church_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Locations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="City" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="State" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Zip" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Church_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BusinessTransactions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Amount" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Person_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Churches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChurchName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Doners">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateOfDonation" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Person_Id" Type="int" Nullable="false" />
+    <Property Name="Church_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Members">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateJoined" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Person_Id" Type="int" Nullable="false" />
+    <Property Name="Church_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pastors">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateOfOrdination" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Person_Id" Type="int" Nullable="false" />
+    <Property Name="Church_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TransationTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TransactionCategory" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BusinessTransaction_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PotentialMembers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateOfContact" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Person_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="LocationPerson">
+    <End Role="Location" Type="ChurchAppModel.Store.Locations" Multiplicity="1" />
+    <End Role="Person" Type="ChurchAppModel.Store.People" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Location">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="Location_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonPastor">
+    <End Role="Person" Type="ChurchAppModel.Store.People" Multiplicity="1" />
+    <End Role="Pastor" Type="ChurchAppModel.Store.Pastors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Pastor">
+        <PropertyRef Name="Person_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonPotentialMember">
+    <End Role="Person" Type="ChurchAppModel.Store.People" Multiplicity="1" />
+    <End Role="PotentialMember" Type="ChurchAppModel.Store.PotentialMembers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PotentialMember">
+        <PropertyRef Name="Person_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonDoner">
+    <End Role="Person" Type="ChurchAppModel.Store.People" Multiplicity="1" />
+    <End Role="Doner" Type="ChurchAppModel.Store.Doners" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Doner">
+        <PropertyRef Name="Person_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonBusinessTransaction">
+    <End Role="Person" Type="ChurchAppModel.Store.People" Multiplicity="1" />
+    <End Role="BusinessTransaction" Type="ChurchAppModel.Store.BusinessTransactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BusinessTransaction">
+        <PropertyRef Name="Person_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonMember">
+    <End Role="Person" Type="ChurchAppModel.Store.People" Multiplicity="1" />
+    <End Role="Member" Type="ChurchAppModel.Store.Members" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="Person_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BusinessTransactionTransationType">
+    <End Role="BusinessTransaction" Type="ChurchAppModel.Store.BusinessTransactions" Multiplicity="1" />
+    <End Role="TransationType" Type="ChurchAppModel.Store.TransationTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessTransaction">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TransationType">
+        <PropertyRef Name="BusinessTransaction_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ChurchLocation">
+    <End Role="Church" Type="ChurchAppModel.Store.Churches" Multiplicity="1" />
+    <End Role="Location" Type="ChurchAppModel.Store.Locations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Church">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Location">
+        <PropertyRef Name="Church_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ChurchMember">
+    <End Role="Church" Type="ChurchAppModel.Store.Churches" Multiplicity="1" />
+    <End Role="Member" Type="ChurchAppModel.Store.Members" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Church">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="Church_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ChurchPastor">
+    <End Role="Church" Type="ChurchAppModel.Store.Churches" Multiplicity="1" />
+    <End Role="Pastor" Type="ChurchAppModel.Store.Pastors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Church">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Pastor">
+        <PropertyRef Name="Church_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ChurchDoner">
+    <End Role="Church" Type="ChurchAppModel.Store.Churches" Multiplicity="1" />
+    <End Role="Doner" Type="ChurchAppModel.Store.Doners" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Church">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Doner">
+        <PropertyRef Name="Church_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ChurchPerson">
+    <End Role="Church" Type="ChurchAppModel.Store.Churches" Multiplicity="1" />
+    <End Role="Person" Type="ChurchAppModel.Store.People" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Church">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="Church_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ChurchAppModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="ChurchAppModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="People" EntityType="ChurchAppModel.Person" />
+          <EntitySet Name="Locations" EntityType="ChurchAppModel.Location" />
+          <EntitySet Name="BusinessTransactions" EntityType="ChurchAppModel.BusinessTransaction" />
+          <EntitySet Name="Churches" EntityType="ChurchAppModel.Church" />
+          <EntitySet Name="Doners" EntityType="ChurchAppModel.Doner" />
+          <EntitySet Name="Members" EntityType="ChurchAppModel.Member" />
+          <EntitySet Name="Pastors" EntityType="ChurchAppModel.Pastor" />
+          <EntitySet Name="TransationTypes" EntityType="ChurchAppModel.TransationType" />
+          <EntitySet Name="PotentialMembers" EntityType="ChurchAppModel.PotentialMember" />
+          <AssociationSet Name="LocationPerson" Association="ChurchAppModel.LocationPerson">
+            <End Role="Location" EntitySet="Locations" />
+            <End Role="Person" EntitySet="People" />
+          </AssociationSet>
+          <AssociationSet Name="PersonPastor" Association="ChurchAppModel.PersonPastor">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Pastor" EntitySet="Pastors" />
+          </AssociationSet>
+          <AssociationSet Name="PersonPotentialMember" Association="ChurchAppModel.PersonPotentialMember">
+            <End Role="Person" EntitySet="People" />
+            <End Role="PotentialMember" EntitySet="PotentialMembers" />
+          </AssociationSet>
+          <AssociationSet Name="PersonDoner" Association="ChurchAppModel.PersonDoner">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Doner" EntitySet="Doners" />
+          </AssociationSet>
+          <AssociationSet Name="PersonBusinessTransaction" Association="ChurchAppModel.PersonBusinessTransaction">
+            <End Role="Person" EntitySet="People" />
+            <End Role="BusinessTransaction" EntitySet="BusinessTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="PersonMember" Association="ChurchAppModel.PersonMember">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Member" EntitySet="Members" />
+          </AssociationSet>
+          <AssociationSet Name="BusinessTransactionTransationType" Association="ChurchAppModel.BusinessTransactionTransationType">
+            <End Role="BusinessTransaction" EntitySet="BusinessTransactions" />
+            <End Role="TransationType" EntitySet="TransationTypes" />
+          </AssociationSet>
+          <AssociationSet Name="ChurchLocation" Association="ChurchAppModel.ChurchLocation">
+            <End Role="Church" EntitySet="Churches" />
+            <End Role="Location" EntitySet="Locations" />
+          </AssociationSet>
+          <AssociationSet Name="ChurchMember" Association="ChurchAppModel.ChurchMember">
+            <End Role="Church" EntitySet="Churches" />
+            <End Role="Member" EntitySet="Members" />
+          </AssociationSet>
+          <AssociationSet Name="ChurchPastor" Association="ChurchAppModel.ChurchPastor">
+            <End Role="Church" EntitySet="Churches" />
+            <End Role="Pastor" EntitySet="Pastors" />
+          </AssociationSet>
+          <AssociationSet Name="ChurchDoner" Association="ChurchAppModel.ChurchDoner">
+            <End Role="Church" EntitySet="Churches" />
+            <End Role="Doner" EntitySet="Doners" />
+          </AssociationSet>
+          <AssociationSet Name="ChurchPerson" Association="ChurchAppModel.ChurchPerson">
+            <End Role="Church" EntitySet="Churches" />
+            <End Role="Person" EntitySet="People" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" />
+          <Property Name="LastName" Type="String" Nullable="false" />
+          <Property Name="Phone" Type="String" Nullable="false" />
+          <Property Name="DescriptionOfRole" Type="String" Nullable="false" />
+          <Property Name="DateOfBirth" Type="String" Nullable="false" />
+          <NavigationProperty Name="Location" Relationship="ChurchAppModel.LocationPerson" FromRole="Person" ToRole="Location" />
+          <NavigationProperty Name="Pastors" Relationship="ChurchAppModel.PersonPastor" FromRole="Person" ToRole="Pastor" />
+          <NavigationProperty Name="PotentialMembers" Relationship="ChurchAppModel.PersonPotentialMember" FromRole="Person" ToRole="PotentialMember" />
+          <NavigationProperty Name="Doners" Relationship="ChurchAppModel.PersonDoner" FromRole="Person" ToRole="Doner" />
+          <NavigationProperty Name="BusinessTransactions" Relationship="ChurchAppModel.PersonBusinessTransaction" FromRole="Person" ToRole="BusinessTransaction" />
+          <NavigationProperty Name="Members" Relationship="ChurchAppModel.PersonMember" FromRole="Person" ToRole="Member" />
+          <NavigationProperty Name="Church" Relationship="ChurchAppModel.ChurchPerson" FromRole="Person" ToRole="Church" />
+        </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address" Type="String" Nullable="false" />
+          <Property Name="City" Type="String" Nullable="false" />
+          <Property Name="State" Type="String" Nullable="false" />
+          <Property Name="Zip" Type="String" Nullable="false" />
+          <NavigationProperty Name="People" Relationship="ChurchAppModel.LocationPerson" FromRole="Location" ToRole="Person" />
+          <NavigationProperty Name="Church" Relationship="ChurchAppModel.ChurchLocation" FromRole="Location" ToRole="Church" />
+        </EntityType>
+        <EntityType Name="BusinessTransaction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="String" Nullable="false" />
+          <Property Name="Amount" Type="String" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="ChurchAppModel.PersonBusinessTransaction" FromRole="BusinessTransaction" ToRole="Person" />
+          <NavigationProperty Name="TransationTypes" Relationship="ChurchAppModel.BusinessTransactionTransationType" FromRole="BusinessTransaction" ToRole="TransationType" />
+        </EntityType>
+        <EntityType Name="Church">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ChurchName" Type="String" Nullable="false" />
+          <NavigationProperty Name="Locations" Relationship="ChurchAppModel.ChurchLocation" FromRole="Church" ToRole="Location" />
+          <NavigationProperty Name="Members" Relationship="ChurchAppModel.ChurchMember" FromRole="Church" ToRole="Member" />
+          <NavigationProperty Name="Pastors" Relationship="ChurchAppModel.ChurchPastor" FromRole="Church" ToRole="Pastor" />
+          <NavigationProperty Name="Doners" Relationship="ChurchAppModel.ChurchDoner" FromRole="Church" ToRole="Doner" />
+          <NavigationProperty Name="People" Relationship="ChurchAppModel.ChurchPerson" FromRole="Church" ToRole="Person" />
+        </EntityType>
+        <EntityType Name="Doner">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateOfDonation" Type="String" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="ChurchAppModel.PersonDoner" FromRole="Doner" ToRole="Person" />
+          <NavigationProperty Name="Church" Relationship="ChurchAppModel.ChurchDoner" FromRole="Doner" ToRole="Church" />
+        </EntityType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateJoined" Type="String" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="ChurchAppModel.PersonMember" FromRole="Member" ToRole="Person" />
+          <NavigationProperty Name="Church" Relationship="ChurchAppModel.ChurchMember" FromRole="Member" ToRole="Church" />
+        </EntityType>
+        <EntityType Name="Pastor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateOfOrdination" Type="String" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="ChurchAppModel.PersonPastor" FromRole="Pastor" ToRole="Person" />
+          <NavigationProperty Name="Church" Relationship="ChurchAppModel.ChurchPastor" FromRole="Pastor" ToRole="Church" />
+        </EntityType>
+        <EntityType Name="TransationType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" Nullable="false" />
+          <Property Name="TransactionCategory" Type="String" Nullable="false" />
+          <NavigationProperty Name="BusinessTransaction" Relationship="ChurchAppModel.BusinessTransactionTransationType" FromRole="TransationType" ToRole="BusinessTransaction" />
+        </EntityType>
+        <EntityType Name="PotentialMember">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateOfContact" Type="String" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="ChurchAppModel.PersonPotentialMember" FromRole="PotentialMember" ToRole="Person" />
+        </EntityType>
+        <Association Name="LocationPerson">
+          <End Type="ChurchAppModel.Location" Role="Location" Multiplicity="1" />
+          <End Type="ChurchAppModel.Person" Role="Person" Multiplicity="*" />
+        </Association>
+        <Association Name="PersonPastor">
+          <End Type="ChurchAppModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="ChurchAppModel.Pastor" Role="Pastor" Multiplicity="*" />
+        </Association>
+        <Association Name="PersonPotentialMember">
+          <End Type="ChurchAppModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="ChurchAppModel.PotentialMember" Role="PotentialMember" Multiplicity="*" />
+        </Association>
+        <Association Name="PersonDoner">
+          <End Type="ChurchAppModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="ChurchAppModel.Doner" Role="Doner" Multiplicity="*" />
+        </Association>
+        <Association Name="PersonBusinessTransaction">
+          <End Type="ChurchAppModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="ChurchAppModel.BusinessTransaction" Role="BusinessTransaction" Multiplicity="*" />
+        </Association>
+        <Association Name="PersonMember">
+          <End Type="ChurchAppModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="ChurchAppModel.Member" Role="Member" Multiplicity="*" />
+        </Association>
+        <Association Name="BusinessTransactionTransationType">
+          <End Type="ChurchAppModel.BusinessTransaction" Role="BusinessTransaction" Multiplicity="1" />
+          <End Type="ChurchAppModel.TransationType" Role="TransationType" Multiplicity="*" />
+        </Association>
+        <Association Name="ChurchLocation">
+          <End Type="ChurchAppModel.Church" Role="Church" Multiplicity="1" />
+          <End Type="ChurchAppModel.Location" Role="Location" Multiplicity="*" />
+        </Association>
+        <Association Name="ChurchMember">
+          <End Type="ChurchAppModel.Church" Role="Church" Multiplicity="1" />
+          <End Type="ChurchAppModel.Member" Role="Member" Multiplicity="*" />
+        </Association>
+        <Association Name="ChurchPastor">
+          <End Type="ChurchAppModel.Church" Role="Church" Multiplicity="1" />
+          <End Type="ChurchAppModel.Pastor" Role="Pastor" Multiplicity="*" />
+        </Association>
+        <Association Name="ChurchDoner">
+          <End Type="ChurchAppModel.Church" Role="Church" Multiplicity="1" />
+          <End Type="ChurchAppModel.Doner" Role="Doner" Multiplicity="*" />
+        </Association>
+        <Association Name="ChurchPerson">
+          <End Type="ChurchAppModel.Church" Role="Church" Multiplicity="1" />
+          <End Type="ChurchAppModel.Person" Role="Person" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ChurchAppModelStoreContainer" CdmEntityContainer="ChurchAppModelContainer">
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="IsTypeOf(ChurchAppModel.Person)">
+        <MappingFragment StoreEntitySet="People">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="DescriptionOfRole" ColumnName="DescriptionOfRole" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="IsTypeOf(ChurchAppModel.Location)">
+        <MappingFragment StoreEntitySet="Locations">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BusinessTransactions">
+      <EntityTypeMapping TypeName="IsTypeOf(ChurchAppModel.BusinessTransaction)">
+        <MappingFragment StoreEntitySet="BusinessTransactions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Churches">
+      <EntityTypeMapping TypeName="IsTypeOf(ChurchAppModel.Church)">
+        <MappingFragment StoreEntitySet="Churches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ChurchName" ColumnName="ChurchName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doners">
+      <EntityTypeMapping TypeName="IsTypeOf(ChurchAppModel.Doner)">
+        <MappingFragment StoreEntitySet="Doners">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateOfDonation" ColumnName="DateOfDonation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="IsTypeOf(ChurchAppModel.Member)">
+        <MappingFragment StoreEntitySet="Members">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateJoined" ColumnName="DateJoined" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pastors">
+      <EntityTypeMapping TypeName="IsTypeOf(ChurchAppModel.Pastor)">
+        <MappingFragment StoreEntitySet="Pastors">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateOfOrdination" ColumnName="DateOfOrdination" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransationTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(ChurchAppModel.TransationType)">
+        <MappingFragment StoreEntitySet="TransationTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TransactionCategory" ColumnName="TransactionCategory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PotentialMembers">
+      <EntityTypeMapping TypeName="IsTypeOf(ChurchAppModel.PotentialMember)">
+        <MappingFragment StoreEntitySet="PotentialMembers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateOfContact" ColumnName="DateOfContact" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="LocationPerson" TypeName="ChurchAppModel.LocationPerson" StoreEntitySet="People">
+      <EndProperty Name="Location">
+        <ScalarProperty Name="Id" ColumnName="Location_Id" />
+      </EndProperty>
+      <EndProperty Name="Person">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PersonPastor" TypeName="ChurchAppModel.PersonPastor" StoreEntitySet="Pastors">
+      <EndProperty Name="Person">
+        <ScalarProperty Name="Id" ColumnName="Person_Id" />
+      </EndProperty>
+      <EndProperty Name="Pastor">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PersonPotentialMember" TypeName="ChurchAppModel.PersonPotentialMember" StoreEntitySet="PotentialMembers">
+      <EndProperty Name="Person">
+        <ScalarProperty Name="Id" ColumnName="Person_Id" />
+      </EndProperty>
+      <EndProperty Name="PotentialMember">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PersonDoner" TypeName="ChurchAppModel.PersonDoner" StoreEntitySet="Doners">
+      <EndProperty Name="Person">
+        <ScalarProperty Name="Id" ColumnName="Person_Id" />
+      </EndProperty>
+      <EndProperty Name="Doner">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PersonBusinessTransaction" TypeName="ChurchAppModel.PersonBusinessTransaction" StoreEntitySet="BusinessTransactions">
+      <EndProperty Name="Person">
+        <ScalarProperty Name="Id" ColumnName="Person_Id" />
+      </EndProperty>
+      <EndProperty Name="BusinessTransaction">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PersonMember" TypeName="ChurchAppModel.PersonMember" StoreEntitySet="Members">
+      <EndProperty Name="Person">
+        <ScalarProperty Name="Id" ColumnName="Person_Id" />
+      </EndProperty>
+      <EndProperty Name="Member">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="BusinessTransactionTransationType" TypeName="ChurchAppModel.BusinessTransactionTransationType" StoreEntitySet="TransationTypes">
+      <EndProperty Name="BusinessTransaction">
+        <ScalarProperty Name="Id" ColumnName="BusinessTransaction_Id" />
+      </EndProperty>
+      <EndProperty Name="TransationType">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ChurchLocation" TypeName="ChurchAppModel.ChurchLocation" StoreEntitySet="Locations">
+      <EndProperty Name="Church">
+        <ScalarProperty Name="Id" ColumnName="Church_Id" />
+      </EndProperty>
+      <EndProperty Name="Location">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ChurchMember" TypeName="ChurchAppModel.ChurchMember" StoreEntitySet="Members">
+      <EndProperty Name="Church">
+        <ScalarProperty Name="Id" ColumnName="Church_Id" />
+      </EndProperty>
+      <EndProperty Name="Member">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ChurchPastor" TypeName="ChurchAppModel.ChurchPastor" StoreEntitySet="Pastors">
+      <EndProperty Name="Church">
+        <ScalarProperty Name="Id" ColumnName="Church_Id" />
+      </EndProperty>
+      <EndProperty Name="Pastor">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ChurchDoner" TypeName="ChurchAppModel.ChurchDoner" StoreEntitySet="Doners">
+      <EndProperty Name="Church">
+        <ScalarProperty Name="Id" ColumnName="Church_Id" />
+      </EndProperty>
+      <EndProperty Name="Doner">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ChurchPerson" TypeName="ChurchAppModel.ChurchPerson" StoreEntitySet="People">
+      <EndProperty Name="Church">
+        <ScalarProperty Name="Id" ColumnName="Church_Id" />
+      </EndProperty>
+      <EndProperty Name="Person">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
