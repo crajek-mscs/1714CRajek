@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 18.00
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1714CRajekex2g2", "1714CRajekex2g2\1714CRajekex2g2.ssmssqlproj", "{A90BB2BE-1F06-4186-9107-AABFFA32DB6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8D95FDA-4952-454C-A05F-976C77E19D0A}.Default|Default.ActiveCfg = Default
+		{A90BB2BE-1F06-4186-9107-AABFFA32DB6D}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99785272-E607-474C-BBDC-64540B2B31E1}
+	EndGlobalSection
+EndGlobal
