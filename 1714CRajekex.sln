@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1714CRajekex2g", "1714CRajekex2g\1714CRajekex2g.csproj", "{32A71A8E-9600-4C4F-9185-A337DB014E1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1714CRajekEx3a", "1714CRajekEx3a\1714CRajekEx3a.csproj", "{FD4D3382-FF01-4E39-9958-7DC7BC568CB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32A71A8E-9600-4C4F-9185-A337DB014E1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32A71A8E-9600-4C4F-9185-A337DB014E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32A71A8E-9600-4C4F-9185-A337DB014E1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32A71A8E-9600-4C4F-9185-A337DB014E1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD4D3382-FF01-4E39-9958-7DC7BC568CB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD4D3382-FF01-4E39-9958-7DC7BC568CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD4D3382-FF01-4E39-9958-7DC7BC568CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD4D3382-FF01-4E39-9958-7DC7BC568CB3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C57F3E10-70D7-46A1-803F-C2693452A7D5}
+	EndGlobalSection
+EndGlobal

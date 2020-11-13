@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 10/26/2020 14:49:34
+-- Date Created: 11/13/2020 10:12:49
 -- Generated from EDMX file: C:\Users\senio\OneDrive\Desktop\COMC1714\1714-Assignments\Projects\1714CRajek\1714CRajekex2g\PropertyManager2Model.edmx
 -- --------------------------------------------------
 
@@ -17,11 +17,47 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_BuildingApartment]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Apartments] DROP CONSTRAINT [FK_BuildingApartment];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TenantApartment]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Apartments] DROP CONSTRAINT [FK_TenantApartment];
+GO
+IF OBJECT_ID(N'[dbo].[FK_AdminApartment]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Apartments] DROP CONSTRAINT [FK_AdminApartment];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ApartmentInvoice]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Invoices] DROP CONSTRAINT [FK_ApartmentInvoice];
+GO
+IF OBJECT_ID(N'[dbo].[FK_InvoiceLineItem]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[LineItems] DROP CONSTRAINT [FK_InvoiceLineItem];
+GO
+IF OBJECT_ID(N'[dbo].[FK_InvoiceReceipt]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Receipts] DROP CONSTRAINT [FK_InvoiceReceipt];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[Buildings]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Buildings];
+GO
+IF OBJECT_ID(N'[dbo].[Apartments]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Apartments];
+GO
+IF OBJECT_ID(N'[dbo].[People]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[People];
+GO
+IF OBJECT_ID(N'[dbo].[LineItems]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[LineItems];
+GO
+IF OBJECT_ID(N'[dbo].[Invoices]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Invoices];
+GO
+IF OBJECT_ID(N'[dbo].[Receipts]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Receipts];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
