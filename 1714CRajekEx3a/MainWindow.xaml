@@ -36,7 +36,7 @@
             <Label VerticalAlignment="Center" Grid.Row="3" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="City:"/>
             <TextBox x:Name="cityTextBox" Width="120" VerticalAlignment="Center" Text="{Binding City, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="3" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
             <Label VerticalAlignment="Center" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Id:"/>
-            <TextBox x:Name="idTextBox" Width="53" VerticalAlignment="Center" Text="{Binding Id, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3.333,0,0,4" Height="28" HorizontalAlignment="Left" Grid.Column="1"/>
+            <TextBox x:Name="idTextBox" Width="53" VerticalAlignment="Center" Text="{Binding Id, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3.333,0,0,4" Height="28" HorizontalAlignment="Left" Grid.Column="1" IsEnabled="False"/>
             <Label VerticalAlignment="Center" Grid.Row="4" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="State:"/>
             <TextBox x:Name="stateTextBox" Width="53" VerticalAlignment="Center" Text="{Binding State, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="4" Margin="3.333,3,0,4" Height="25" HorizontalAlignment="Left" Grid.Column="1"/>
             <Label VerticalAlignment="Center" Grid.Row="5" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Zip:"/>
