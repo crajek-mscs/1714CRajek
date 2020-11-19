@@ -37,19 +37,19 @@ namespace _1714CRajek3b1
             personViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("personViewSource")));
             // Load data by setting the CollectionViewSource.Source property:
             dbContext = new PropertyManager2ModelContainer();
-            dbContext.People.Load();
+            dbContext.People.Where(p => (p.Apartments1.Count > 0)).Load();
             personViewSource.Source = dbContext.People.Local;
             dbContext.Configuration.AutoDetectChangesEnabled = true;
         }
 
         private void firstButton_Click(object sender, RoutedEventArgs e)
         {
-           
+            personViewSource.View.MoveCurrentToFirst();
         }
 
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
-
+            personViewSource.View.MoveCurrentToPrevious();
         }
 
         private void nextButton_Click(object sender, RoutedEventArgs e)
@@ -60,12 +60,12 @@ namespace _1714CRajek3b1
  
         private void lastButton_Click(object sender, RoutedEventArgs e)
         {
-
+            personViewSource.View.MoveCurrentToLast();
         }
 
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
-
+            dbContext.SaveChanges();
         }
 
        

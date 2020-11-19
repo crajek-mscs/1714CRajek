@@ -6,13 +6,18 @@
         xmlns:local="clr-namespace:_1714CRajek3b1"
         xmlns:_1714CRajekex2g="clr-namespace:_1714CRajekex2g;assembly=1714CRajekex2g" x:Class="_1714CRajek3b1.MainWindow"
         mc:Ignorable="d"
-        Title="1714CRajek3a Property Manager, People" Height="328.667" Width="369.333" Loaded="Window_Loaded">
+        Title="1714CRajek3b1 Property Manager, Administrators" Height="398.625" Width="500.666" Loaded="Window_Loaded">
     <Window.Resources>
         <CollectionViewSource x:Key="personViewSource" d:DesignSource="{d:DesignInstance {x:Type _1714CRajekex2g:Person}, CreateList=True}"/>
+        <CollectionViewSource x:Key="personApartments1ViewSource" Source="{Binding Apartments1, Source={StaticResource personViewSource}}"/>
     </Window.Resources>
-    <Grid>
+    <Grid DataContext="{StaticResource personApartments1ViewSource}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="192*"/>
+        </Grid.ColumnDefinitions>
 
-        <Grid x:Name="grid1" VerticalAlignment="Top" Margin="37,65,0,0" HorizontalAlignment="Left" DataContext="{StaticResource personViewSource}" Width="262">
+        <Grid x:Name="grid1" VerticalAlignment="Top" Margin="37,65,0,0" HorizontalAlignment="Left" DataContext="{StaticResource personViewSource}" Width="262" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -25,23 +30,32 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <Label VerticalAlignment="Center" Grid.Row="3" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Email:"/>
-            <TextBox x:Name="emailTextBox" Width="174" VerticalAlignment="Center" Text="{Binding Email, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="3" Margin="3.333,4,-50.667,4" Height="24" HorizontalAlignment="Left" Grid.Column="1"/>
+            <TextBox x:Name="emailTextBox" Width="174" VerticalAlignment="Center" Text="{Binding Email, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" Margin="3.333,4,-50.667,4" Height="24" HorizontalAlignment="Left" Grid.Column="1"/>
             <Label VerticalAlignment="Center" Grid.Row="1" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="First Name:"/>
-            <TextBox x:Name="firstNameTextBox" Width="120" VerticalAlignment="Center" Text="{Binding FirstName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="1" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+            <TextBox x:Name="firstNameTextBox" Width="120" VerticalAlignment="Center" Text="{Binding FirstName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
             <Label VerticalAlignment="Center" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Id:"/>
-            <TextBox x:Name="idTextBox" Width="68" VerticalAlignment="Center" Text="{Binding Id, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3.333,4,0,4" Height="24" HorizontalAlignment="Left" Grid.Column="1"/>
+            <TextBox x:Name="idTextBox" Width="68" VerticalAlignment="Center" Text="{Binding Id, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true, UpdateSourceTrigger=PropertyChanged}" Margin="3.333,4,0,4" Height="24" HorizontalAlignment="Left" Grid.Column="1" IsEnabled="False"/>
             <Label VerticalAlignment="Center" Grid.Row="2" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Last Name:"/>
-            <TextBox x:Name="lastNameTextBox" Width="120" VerticalAlignment="Center" Text="{Binding LastName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="2" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+            <TextBox x:Name="lastNameTextBox" Width="120" VerticalAlignment="Center" Text="{Binding LastName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
             <Label VerticalAlignment="Center" Grid.Row="4" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Phone:"/>
-            <TextBox x:Name="phoneTextBox" Width="120" VerticalAlignment="Center" Text="{Binding Phone, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="4" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+            <TextBox x:Name="phoneTextBox" Width="120" VerticalAlignment="Center" Text="{Binding Phone, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true, UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
         </Grid>
-        <ToolBar HorizontalAlignment="Right" Height="32" VerticalAlignment="Top" Width="363" Margin="0,0,-0.333,0">
+        <ToolBar HorizontalAlignment="Right" Height="32" VerticalAlignment="Top" Width="363" Grid.Column="1">
             <Button x:Name="firstButton" Content="|&lt;" Height="31" VerticalAlignment="Top" Width="32" Click="firstButton_Click" Margin="0,0,0,-3.667"/>
             <Button x:Name="backButton" Content="&lt;" Height="31" VerticalAlignment="Top" Width="32" Click="backButton_Click" Margin="0,0,0,-3.667"/>
             <Button x:Name="nextButton" Content="&gt;" VerticalAlignment="Stretch" Width="32" Click="nextButton_Click" Margin="0,0,0,-3.667"/>
             <Button x:Name="lastButton" Content="&gt;|" Height="31" VerticalAlignment="Top" Width="32" Click="lastButton_Click" Margin="0,0,0,-3.667"/>
             <Button x:Name="saveButton" Content="Save" Height="31" VerticalAlignment="Top" Width="32" Click="saveButton_Click" Margin="0,0,0,-3.667"/>
         </ToolBar>
+        <DataGrid x:Name="apartments1DataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="7,230,50,38.333" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="True" Grid.Column="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="apartmentNumColumn" Binding="{Binding ApartmentNum}" Header="Apartment Num" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="bathroomsColumn" Binding="{Binding Bathrooms}" Header="Bathrooms" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="idColumn" Binding="{Binding Id}" Header="Id" Width="SizeToHeader" Visibility="Hidden"/>
+                <DataGridTextColumn x:Name="rentColumn" Binding="{Binding Rent}" Header="Rent" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="squareFeetColumn" Binding="{Binding SquareFeet}" Header="Square Feet" Width="SizeToHeader"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>
